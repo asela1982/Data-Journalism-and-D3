@@ -312,8 +312,22 @@ d3.json(url, function (err, data) {
                 .transition()
                 .duration(1000)
                 .ease(d3.easeLinear)
+                .on("start", function () {
+                    d3.select(this)
+                        .attr("opacity", 0.50)
+                        .attr("r", 20)
+
+                })
                 .attr("cy", function (data) {
                     return yScale(data[currentAxisLabelY]);
+                })
+                .on("end", function () {
+                    d3.select(this)
+                        .transition()
+                        .duration(500)
+                        .attr("r", 15)
+                        .attr("fill", "#4380BA")
+                        .attr("opacity", 0.75);
                 })
 
             d3.selectAll(".stateText")
