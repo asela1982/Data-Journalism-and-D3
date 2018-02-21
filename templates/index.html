@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Journalism and D3</title>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+
+    <!-- d3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1>A Link Between Household Income and Smoking?</h1>
+
+                <p>In this Data Driven Document (D3), We explore certain associations between demographics and behavioural risk
+                    factors using survey data collected from the American Community survey (ACS) and the Behavioral Risk
+                    Factor Surveillance System (BRFSS) during the year 2014. Each marker represents an indiviual state in USA. Click on any of
+                    the axis titles to start exploring! </p>
+            </div>
+            
+
+            <div class="col-md-10 col-md-offset-1">
+                    <hr>
+                <div class="chart">
+                </div>
+                
+                <hr>
+            </div>
+            
+            <div class="col-md-8 col-md-offset-2">
+                <p>So what are some of the eye-catching associations? An inverse association between the household income and
+                    smoking was something I didn't expect (you may click the Household Income title text on the x-axis).
+                    State of Utah doesn't seem to fit well with the model though. Another association I saw was between age
+                    dependency and alcohol consumption (if we exclude the state of DC, this relationship will become more
+                    apparent). If we for a moment forget the popular statemet in statistics that correlation does not imply
+                    causation, we can probably say that people become sober when they are dealt with more responsibilities.
+                    We also can see an inverse association between poverty and being physical active. </p>
+
+
+                <p>This is my first D3 based data visualization. I would like to thank Scott Murray for his amazing book: Interactive
+                    Data Visualzation for the Web, and Jeremy Hill at UT Austin for the inspiration and guidance. </p>
+
+
+                <a href="">Explore the d3.js code</a>
+
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+
+    <script src="{{url_for('static',filename='js/app.js')}}"></script>
+
+</body>
+
+</html>
